@@ -43,7 +43,7 @@ DummyPointCloud2Publication::DummyPointCloud2Publication()
 	std::cout << "frame_ = " << frame_ << std::endl;
 	nh_private_.param("rand_range", rand_range_, 100.0);
 	std::cout << "rand_range_ = " << rand_range_ << std::endl;
-	nh_private_.param("num_points_", num_points_, 1000);
+	nh_private_.param("num_points", num_points_, 1000);
 	std::cout << "num_points_ = " << num_points_ << std::endl;
 	/*publisher*/
 	pub_ = nh_.advertise<sensor_msgs::PointCloud2>("/dummy/pointcloud2", 1);
